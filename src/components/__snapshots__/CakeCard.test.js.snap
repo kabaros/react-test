@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a card with a cake 1`] = `
+<div>
+  <article
+    data-reactroot=""
+    class="cake-card"
+  >
+    <img
+      alt="image-title"
+    />
+    <h2>
+      image-title
+    </h2>
+    <p>
+      some description
+    </p>
+  </article>
+</div>
+`;

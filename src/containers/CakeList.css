@@ -1,0 +1,7 @@
+.cakes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+}
