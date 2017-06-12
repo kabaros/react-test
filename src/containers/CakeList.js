@@ -1,26 +1,51 @@
 import React, { Component } from 'react';
 import CakeCard from '../components/CakeCard';
+import CakeSearch from '../components/CakeSearch';
+import { fetchCakes } from '../helpers/api-helpers';
+import matchCakes from '../helpers/match-cakes';
 
-import { cakeUrl } from '../config';
 import './CakeList.css';
 
 class CakeList extends Component {
     state = {
-        cakes: []
+        cakes: [],
+        searchCriteria: '',
     }
+
+    allCakes = []
+
     async componentDidMount() {
-        const response = await fetch(cakeUrl);
-        const cakes = await response.json();
+        const cakes = await fetchCakes();
+        this.allCakes = cakes;
         
         this.setState({
             cakes
         });
     }
+
+    searchCakes = (cakeName) => {
+        if(!cakeName) {
+            this.setState({
+                cakes: this.allCakes
+            })
+        }
+
+        const cakes = matchCakes(this.allCakes, matchCakes)
+
+        this.setState({
+            cakes
+        })
+    }
+
     render() {
-        return (<div className="cakes-container">
-            {
-                this.state.cakes.map((cake) => <CakeCard cake={cake} />)
-            }
+        return (
+        <div>
+            <CakeSearch searchCriteria={this.state.searchCriteria} onSearch={this.searchCakes} />
+            <div className="cakes-container">
+                {
+                    this.state.cakes.map((cake) => <CakeCard cake={cake} />)
+                }
+            </div>
         </div>);
     }
 }

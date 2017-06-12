@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the list of cakes returned by the api 1`] = `
+<div>
+  <div
+    className="cake-search"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search for a cake"
+      type="text"
+    />
+  </div>
+  <div
+    className="cakes-container"
+  >
+    <article
+      className="cake-card"
+    >
+      <div
+        className="card-header"
+      >
+        <img
+          alt="image-title"
+          src={undefined}
+        />
+      </div>
+      <h2>
+        image-title
+      </h2>
+      <p>
+        some description
+      </p>
+    </article>
+  </div>
+</div>
+`;

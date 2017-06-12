@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Search box for matching cakes 1`] = `
+<div
+  className="cake-search"
+>
+  <input
+    onChange={[Function]}
+    placeholder="Search for a cake"
+    type="text"
+  />
+</div>
+`;
