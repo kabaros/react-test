@@ -29,8 +29,7 @@ class CakeList extends Component {
                 cakes: this.allCakes
             })
         }
-
-        const cakes = matchCakes(this.allCakes, matchCakes)
+        const cakes = matchCakes(this.allCakes, matchCakes);
 
         this.setState({
             cakes
@@ -43,7 +42,11 @@ class CakeList extends Component {
             <CakeSearch searchCriteria={this.state.searchCriteria} onSearch={this.searchCakes} />
             <div className="cakes-container">
                 {
-                    this.state.cakes.map((cake) => <CakeCard cake={cake} />)
+                    /*
+                        I am using the index as a key to suppress errors
+                        This is wrong - the api should have provided a unique key to use
+                     */
+                    this.state.cakes.map((cake, i) => <CakeCard key={i} cake={cake} />)
                 }
             </div>
         </div>);

@@ -1,5 +1,5 @@
 import React from 'react';
-import CakeList, { matchCakes } from './CakeList';
+import CakeList from './CakeList';
 import renderer from 'react-test-renderer';
 import helpers from '../helpers/api-helpers';
 
@@ -17,7 +17,7 @@ jest.mock('../helpers/api-helpers', () => {
 });
 
 it('should call the api', () => {
-    const component = renderer.create(<CakeList />);
+    renderer.create(<CakeList />);
     expect(helpers.fetchCakes).toHaveBeenCalled();
 });
 

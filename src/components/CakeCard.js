@@ -13,9 +13,11 @@ const CakeCard = ({ cake }) => {
 };
 
 CakeCard.propTypes = {
-    title: PropTypes.string,
-    desc: PropTypes.string,
-    image: PropTypes.string
+    cake: PropTypes.shape({
+        title: PropTypes.string,
+        desc: PropTypes.string,
+        image: PropTypes.string
+    })
 };
 
 export default CakeCard;

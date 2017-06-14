@@ -11,4 +11,7 @@ const CakeSearch = ({ onSearch }) => {
     </div>)
 };
 
+CakeSearch.propTypes = {
+    onSearch: PropTypes.func
+}
 export default CakeSearch;
