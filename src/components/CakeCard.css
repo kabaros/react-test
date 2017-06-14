@@ -18,3 +18,10 @@
         width: 40%;
     }
 }
+
+
+@media (min-width: 1000px) {     
+    .cake-card {
+        width: 30%;
+    }
+}

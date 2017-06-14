@@ -1,11 +1,8 @@
 
-## TODO
+## Cakes
 
-Using [create-react-app](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html), any other tool or library you wish, and 2-3 hours, please deliver the following:
-
-- Render list of cakes (https://gist.githubusercontent.com/hart88/198f29ec5114a3ec3460/raw/8dd19a88f9b8d24c23d9960f3300d0c917a4f07c/cake.json)
-- Make UI render nicely on iPad and Nexus 5
-- Add ability to search cakes
-- Add basic ability to edit/add cakes
-
-All code must be tested
+- the files are organised into **containers** which are the smart containers that manage state (only CakeList in this case) and dumb **components**
+- Used JEST and (mostly) snapshot testing.
+- I normally use **enzyme**, I wanted to get away without using it as I thought this is a simple test but still went back and added it when I needed to simulate DOM events (and it was painful using react-test-tools)
+- The api doesn't return a unique identifier with each key so I used the array index as a key when rendering cakes. That is wrong in a real app as it screws up React smart diffing when rerendering the DOM
+- I have added very basic edit functionality as I didn't know what you had in mind exactly
