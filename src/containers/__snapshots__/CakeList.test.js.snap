@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the list of cakes returned by the api 1`] = `
+exports[`should render the list of cakes returned by the api 1`] = `
 <div>
   <div
     className="cake-search"
@@ -21,15 +21,33 @@ exports[`renders the list of cakes returned by the api 1`] = `
         className="card-header"
       >
         <img
-          alt="image-title"
+          alt="awesome-cake"
           src={undefined}
         />
       </div>
       <h2>
-        image-title
+        awesome-cake
       </h2>
       <p>
         some description
+      </p>
+    </article>
+    <article
+      className="cake-card"
+    >
+      <div
+        className="card-header"
+      >
+        <img
+          alt="bad-cake"
+          src={undefined}
+        />
+      </div>
+      <h2>
+        bad-cake
+      </h2>
+      <p>
+        bad cake description
       </p>
     </article>
   </div>

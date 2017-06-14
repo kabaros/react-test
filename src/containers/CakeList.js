@@ -29,7 +29,7 @@ class CakeList extends Component {
                 cakes: this.allCakes
             })
         }
-        const cakes = matchCakes(this.allCakes, matchCakes);
+        const cakes = matchCakes(this.allCakes, cakeName);
 
         this.setState({
             cakes
